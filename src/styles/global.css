@@ -1,0 +1,165 @@
+
+
+* {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+  }
+  
+  body {
+    background-color: rgb(73, 180, 247);
+    /* background: url("../public/background1.jpg") no-repeat center center fixed; */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+  }
+  
+  .Home-logo {
+    height: 20vw;
+    border-radius: 50%;
+  }
+  
+  .Home-header {
+    background-color: rgba(151, 140, 146, .7);
+    text-align: center;
+    color: black;
+    margin: 3vh;
+    padding: 3vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+    font-size: 1.6em;
+    background-color: rgb(151, 140, 146);
+    padding: 1vh;
+    position: sticky;
+    top: 0;
+    z-index: 1
+  }
+  
+  .menu {
+    text-align: center;
+    position: absolute;
+    justify-content: space-around;
+    top: 6vh;
+    width: 33vw;
+    background-color: rgb(151, 140, 146);
+    padding: 2vh;
+  }
+  * > a {
+    color: white;
+    text-decoration: none
+  }
+  
+  a:hover {
+    color: black
+  }
+  
+  a > div:hover {
+    border-color: black
+  }
+  
+  .portfolio {
+    flex-direction: column;
+    display: flex;
+    margin: 3vh;
+    padding: 3vh;
+    background-color: rgba(151, 140, 146, .7);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3vh;
+    /*background-color: rgba(151, 140, 146, .7);*/
+  }
+  
+  .project {
+    height: 25vw;
+    width: 25vw;
+    min-height: 180px;
+    min-width: 180px;
+    margin: 5vw;
+    border: 1px solid white;
+    position: relative;
+  }
+  
+  .title {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(151, 140, 146, .7);
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bio {
+    width: 50%;
+    padding: 3vh;
+    margin: 3vh;
+    background-color: rgba(151, 140, 146, .7);
+  }
+  
+  .detail {
+    width: 80vw;
+    padding: 1vh;
+    margin: 3vh;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+    font-size: 1em;
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3vh;
+    margin-top: 20px;
+  }
+  
+  .canvasContainer {
+    margin: 3vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 94vw;
+  }
+  
+  .cert {
+    width: 25vw;
+  }
+  
+  .nameLogo {
+    font-family: 'Poiret One', cursive;
+    font-size: 3em;
+    margin: 5vw;
+  }
+  
+  .titleLogo {
+    font-family: 'Poiret One', cursive;
+    font-size: 2em;
+  }
+  
+  .projectAnchor {
+    font-size: 140%;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 5vh;
+  }
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
