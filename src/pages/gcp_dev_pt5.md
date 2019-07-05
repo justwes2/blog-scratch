@@ -3,7 +3,8 @@ path: "/gcp_dev_pt5"
 date: "2019-07-07"
 title: "GCP Developer Exam Study Guide - Part V"
 ---
-_Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp_developer)._
+*Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
+
 
 #### Section 5: Managing Application Performance Monitoring
 5.1 Installing the logging and monitoring agent: 

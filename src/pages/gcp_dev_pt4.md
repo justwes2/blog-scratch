@@ -3,7 +3,8 @@ path: "/gcp_dev_pt4"
 date: "2019-07-06"
 title: "GCP Developer Exam Study Guide - Part IV"
 ---
-_Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp_developer)._
+*Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
+
 
 #### Section 4: Integrating Google Cloud Platform Services
 4.1 Integrating an application with Data and Storage services

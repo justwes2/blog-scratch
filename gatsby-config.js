@@ -10,7 +10,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `comic sans`,
+          `Raleway`,
         ],
         display: 'swap'
       },
