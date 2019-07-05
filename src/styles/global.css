@@ -1,11 +1,11 @@
 
-
 * {
     font-family: 'Raleway', sans-serif;
     color: white;
   }
   
   body {
+    font-family: 'Raleway', sans-serif;
     background-color: rgb(73, 180, 247);
     /* background: url("../public/background1.jpg") no-repeat center center fixed; */
     -webkit-background-size: cover;
