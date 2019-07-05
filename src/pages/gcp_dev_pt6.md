@@ -3,8 +3,7 @@ path: "/gcp_dev_pt6"
 date: "2019-07-08"
 title: "GCP Developer Exam Study Guide - Part VI"
 ---
-
-*Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
+_Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp_developer)._
 
 
 ### Nota Bene:
@@ -16,7 +15,7 @@ title: "GCP Developer Exam Study Guide - Part VI"
     - Profiler: after configuring [profiler](https://cloud.google.com/profiler/docs/quickstart) in an app, you can view the app in the profiler console. It will generate a flame graph for examining the data. Data can be viewed by service, and filtered on a number of catagories. The levels in the graph represent all processes, from the entire executable (100% of all resources used), down through the modules, into the specific funtions. The exact breakout will vary by runtime/language. Using profiler, you can identify specific funtions in an application that are consuming the most resources. These may be candidates for refactoring or other optimization.
     - Logging: [Logging](https://github.com/GoogleCloudPlatform/gke-tracing-demo#monitoring-and-logging) provides a single pane of glass to view platform and application logs. Based on bottlenecks identified in trace, you can filter the logs to view those related to the specific service that is performing poorly to determine what changes would best address issues.
 
-*Based on [Sathishvj's excellent writeup](https://medium.com/@sathishvj/notes-from-my-beta-google-cloud-professional-cloud-developer-exam-e5826f6e5de1)*
+_Based on [this](https://medium.com/@sathishvj/notes-from-my-beta-google-cloud-professional-cloud-developer-exam-e5826f6e5de1)_
 - [Identity Aware Proxy](https://cloud.google.com/iap/): Sits on a load balancer, app engine, or kubernetes cluster to allow context specific access to resources. Part of a zero-trust network- each request is evaluated and approved or denied independently. Allows for greater access off site, to selected resources, use on mobile devices, and other flexiblity. Some information on [setup](https://medium.com/google-cloud/what-is-beyondcorp-what-is-identity-aware-proxy-de525d9b3f90) and [context](https://medium.com/google-cloud/how-to-get-cloud-identity-aware-proxy-up-and-running-547195f1fce3)
 - [Endpoints](https://cloud.google.com/endpoints/docs/choose-endpoints-option): Per docs: An NGINX-based proxy and distributed architecture give unparalleled performance and scalability. Using an Open API Specification or one of our API frameworks, Cloud Endpoints gives you the tools you need for every phase of API development and provides insight with Stackdriver Monitoring, Trace and Logging.
     - Services you can use endpoints with:

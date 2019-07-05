@@ -3,11 +3,11 @@
     font-family: 'Raleway', sans-serif;
     color: white;
   }
-
+  
   body {
     font-family: 'Raleway', sans-serif;
     background-color: rgb(73, 180, 247);
-    background: url("../images/background1.jpg") no-repeat center center fixed;
+    /* background: url("../public/background1.jpg") no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -54,7 +54,7 @@
     padding: 2vh;
   }
   * > a {
-    color: rgb(1, 70, 134);
+    color: white;
     text-decoration: none
   }
   
