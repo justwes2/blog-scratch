@@ -9,20 +9,20 @@ Part 6 of 6
 
 
 
-### Nota Bene:
-- Bigtable not availible in all regions- can be global among availible regions 
+### Appendix/Miscellaneous Notes:
+- Bigtable not available in all regions- can be global among availible regions 
 - [Stackdriver](https://medium.com/google-cloud/tagged/stackdriver):
     - Trace: [trace](https://github.com/GoogleCloudPlatform/gke-tracing-demo#validation) to see the span of https requests in a SOA app. You can see what calls are taking the most time, and where the bottlenecks are (similar to [jaeger](https://www.jaegertracing.io/), the open source network tool). 
     - Debugger: This [tool](https://cloud.google.com/debugger/docs/quickstart) allows you to debug production applications. You can insert snapshots, which capture state (local vars and call stack) of an application at a specific line in the code. The snapshot will be taken when that line of code is hit while running. You can also request specific info, like `self.request.environ['HTTP_USER_AGENT']` in a snapshot. You can inject a debug logpoint, which lets you inject logging into a running app without restarting it. It can be configured for all GCP compute environments with most runtimes.
     - Monitoring: Usage and alerting(uptime checks, cpu usage, etc). Good overview [here](https://www.youtube.com/watch?v=IMsRWbYKJqg). Some monitoring needs an agent installed on the GCE vms. 
-    - Profiler: after configuring [profiler](https://cloud.google.com/profiler/docs/quickstart) in an app, you can view the app in the profiler console. It will generate a flame graph for examining the data. Data can be viewed by service, and filtered on a number of catagories. The levels in the graph represent all processes, from the entire executable (100% of all resources used), down through the modules, into the specific funtions. The exact breakout will vary by runtime/language. Using profiler, you can identify specific funtions in an application that are consuming the most resources. These may be candidates for refactoring or other optimization.
+    - Profiler: after configuring [profiler](https://cloud.google.com/profiler/docs/quickstart) in an app, you can view the app in the profiler console. It will generate a flame graph for examining the data. Data can be viewed by service, and filtered on a number of catagories. The levels in the graph represent all processes, from the entire executable (100% of all resources used), down through the modules, into the specific functions. The exact breakout will vary by runtime/language. Using profiler, you can identify specific functions in an application that are consuming the most resources. These may be candidates for refactoring or other optimization.
     - Logging: [Logging](https://github.com/GoogleCloudPlatform/gke-tracing-demo#monitoring-and-logging) provides a single pane of glass to view platform and application logs. Based on bottlenecks identified in trace, you can filter the logs to view those related to the specific service that is performing poorly to determine what changes would best address issues.
 
 _Based on [this](https://medium.com/@sathishvj/notes-from-my-beta-google-cloud-professional-cloud-developer-exam-e5826f6e5de1)_
-- [Identity Aware Proxy](https://cloud.google.com/iap/): Sits on a load balancer, app engine, or kubernetes cluster to allow context specific access to resources. Part of a zero-trust network- each request is evaluated and approved or denied independently. Allows for greater access off site, to selected resources, use on mobile devices, and other flexiblity. Some information on [setup](https://medium.com/google-cloud/what-is-beyondcorp-what-is-identity-aware-proxy-de525d9b3f90) and [context](https://medium.com/google-cloud/how-to-get-cloud-identity-aware-proxy-up-and-running-547195f1fce3)
+- [Identity Aware Proxy](https://cloud.google.com/iap/): Sits on a load balancer, app engine, or kubernetes cluster to allow context specific access to resources. Part of a zero-trust network- each request is evaluated and approved or denied independently. Allows for greater access off site, to selected resources, use on mobile devices, and other flexibility. Some information on [setup](https://medium.com/google-cloud/what-is-beyondcorp-what-is-identity-aware-proxy-de525d9b3f90) and [context](https://medium.com/google-cloud/how-to-get-cloud-identity-aware-proxy-up-and-running-547195f1fce3)
 - [Endpoints](https://cloud.google.com/endpoints/docs/choose-endpoints-option): Per docs: An NGINX-based proxy and distributed architecture give unparalleled performance and scalability. Using an Open API Specification or one of our API frameworks, Cloud Endpoints gives you the tools you need for every phase of API development and provides insight with Stackdriver Monitoring, Trace and Logging.
     - Services you can use endpoints with:
-        - Endpoints for OpenAPI: Most compute resources: App Enginestandard environment generation 1, App Engine, standard environment generation 2, App Engine flexible environment, Cloud Functions, Cloud Run, Compute Engine, GKE, Kubernetes, Other non-GCP
+        - Endpoints for OpenAPI: Most compute resources: App Engine standard environment generation 1, App Engine, standard environment generation 2, App Engine flexible environment, Cloud Functions, Cloud Run, Compute Engine, GKE, Kubernetes, Other non-GCP
         - Endpoints for gRPC: Compute Engine, GKE, Kubernetes, Other non-GCP
         - Endpoints Frameworks: App Engine standard environment generation 1 Java 8 and Python 2.7 runtimes
     - How do you do [authentication/authorization](https://cloud.google.com/endpoints/docs/openapi/authentication-method): 
@@ -173,9 +173,9 @@ _Based on [this](https://medium.com/@sathishvj/notes-from-my-beta-google-cloud-p
         - read replicas in same zone
         - failover replicas in same region
         - [More](https://cloud.google.com/sql/docs/mysql/high-availability)
-        - For global reachablity, switch to Spanner
+        - For global reachability, switch to Spanner
 - Cloud Spanner:
-    - use case: global availiblity, ACID++
+    - use case: global availability, ACID++
     - minimize costs:
         - configuration: instance configuration defines the geographic placement and replication of the databases in that instance. When you create an instance, you must configure it as either regional (that is, all the resources are contained within a single GCP region) or multi-region 
         - node count: Each node provides up to 2 TiB of storage. The peak read and write throughput values that nodes can provide depend on the instance configuration, as well as on schema design and dataset characteristics

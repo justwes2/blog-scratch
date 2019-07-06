@@ -36,7 +36,7 @@ Part 1 of 6
 - Applicable regulatory requirements and legislation: Varies depending on location (GDPR), industry (HIPPA), and other stuff. See [Docs](https://privacy.google.com/businesses/compliance/#!?modal_active=none)
 - Security mechanisms that protect services and resources: varies from service to service. IAM can be used to limit user access and communication between resources. Ensure that buckets aren't public, firewalls aren't open. 
 - Storing and rotating secrets: IAM service account keys are automatically rotated. GCP's [Secrets Management](https://cloud.google.com/solutions/secrets-management/) can be used for other secrets. Rotate your keys/secrets. Third party products like vault also exist- not sure google cares.
-- IAM roles for users/groups/service accounts: All IAM entities can be assigned a role at the project level (can also be asigned at the folder or org level). Using roles can limit access to principle of least privilege. 
+- IAM roles for users/groups/service accounts: All IAM entities can be assigned a role at the project level (can also be assigned at the folder or org level). Using roles can limit access to principle of least privilege. 
 - HTTPS certificates: You can put an SSL cert on a load balancer for HTTPS traffic. GCP will manage certs, or you can bring your own. You can also attach an SSL cert to an App Engine
 - Google-recommended practices and documentation: [tl;dr](https://cloud.google.com/docs/enterprise/best-practices-for-enterprise-organizations#secure-apps-and-data): Ensure VPCs are secured (service controls), put HTTPS load balancing in place, use Cloud Armor service, Use Cloud Identity-Aware Proxy service
 1.3 Managing application data: 
