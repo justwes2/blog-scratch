@@ -3,6 +3,8 @@ path: "/gcp_dev_pt1"
 date: "2019-07-03"
 title: "GCP Developer Exam Study Guide - Part I"
 ---
+Part 1 of 6  
+
 *Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
 
 #### Section 1: Designing highly scalable, available, and reliable cloud-native applications

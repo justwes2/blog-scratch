@@ -3,8 +3,14 @@ path: "/about"
 date: "2019-07-02"
 title: "Hello world"
 ---
-Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+## About Me <br/>
 
-Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
+Hi, I'm Wes, I'm a Cloud Engineer based around DC. I like clouds- I mostly work in AWS and GCP. I like tools that make clouds better, faster, stronger- Terraform, Chef, Jenkins. I like coding- mostly in python and ruby, but also some JS. I'm good enough to break things, and sometimes to fix them. 
 
-Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.
+I work as a consultant, and I teach/train engineers in cloud technologies. Some of that is stuff that I need a place to keep, so I decided I'd give bloging a try. So, I'm replacing my old Web Development portfolio with a more traditional blog because it aligns more with the kind of work I'm doing now- I can' really post a demo of a terraform IAM framework, but I can write about it. Also, things I put together for classes- labs, demos, projects etc, can all find a home here. 
+
+If you want to know more, you can find me at
+
+- [My LinkedIn](https://www.linkedin.com/in/wes-coffay-4027b040)
+- [My GitHub](https://github.com/justwes2)
+- Or you can email me at wes.coffay[a]gmail.com
