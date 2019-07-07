@@ -19,7 +19,7 @@ Part 3 of 6
 As long as service resources are behind a google load balancer, most of these strategies can be supported for most compute services. 
 
 3.2 Deploying applications and services on Compute Engine.
-- Launching a compute instance using GCP Console and Cloud SDK (gcloud)(e.g., assign disks, availiblity policy, ssh keys):
+- Launching a compute instance using GCP Console and Cloud SDK (gcloud)(e.g., assign disks, availability policy, ssh keys):
    - In the [console](https://cloud.google.com/compute/docs/instances/create-start-instance)
    - Using gcloud:
    ```
@@ -29,7 +29,7 @@ As long as service resources are behind a google load balancer, most of these st
    --subnet [SUBNET_NAME] \
    --zone [ZONE_NAME]
    ```
-- Moving a persistant disk to a different VM: Detach the disk from the first VM (ensure the disk was unmounted so no data loss occured), attach the disk to the new VM (you will then need to mount the disk inside the VM). If the target VM is in a differnt zone, use the `gcloud compute disks move` command.
+- Moving a persistent disk to a different VM: Detach the disk from the first VM (ensure the disk was unmounted so no data loss occurred), attach the disk to the new VM (you will then need to mount the disk inside the VM). If the target VM is in a different zone, use the `gcloud compute disks move` command.
 - Creating an autoscaled managed instance group using an instance template: See the [Docs](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances). tl;dr, you can create an instance template from an image- public or private. When creating the managed instance group, designate the desired template, and that is the image that will be used to autoscale the group.
 - Generating/uploading a custom ssh key for instances: You can use [OS Login](https://cloud.google.com/compute/docs/instances/managing-instance-access) to manage ssh access to linux instances using IAM roles. If that is not an effective solution (not all users needing SSH access have IAM credentials), you can [manage ssh keys in metadata](https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys). Run the `gcloud compute project-info add-metadata` to add the users' public keys who should have access. 
 - Configuring a VM for Stackdriver monitoring and logging: Install the [agent](https://cloud.google.com/logging/docs/agent/installation). You can [configure](https://cloud.google.com/logging/docs/agent/configuration) to agent, but it will function out of the box. You can access your logs in the console or via the api.
@@ -39,16 +39,16 @@ As long as service resources are behind a google load balancer, most of these st
         --metadata-from-file startup-script=PATH/TO/FILE/install.sh
     ```
    You can store the file locally or in a bucket. More [info](https://cloud.google.com/compute/docs/startupscript)
-- Creating custom metadata tags: You can attach tags/labels to resources to filter for cost, routing, access, and other funtionality. More in the [Docs](https://cloud.google.com/compute/docs/labeling-resources).
+- Creating custom metadata tags: You can attach tags/labels to resources to filter for cost, routing, access, and other functionality. More in the [Docs](https://cloud.google.com/compute/docs/labeling-resources).
 - Creating a loadbalancer for Compute Engine instances: GCP offers a number of different load balancers, per [Docs](https://cloud.google.com/load-balancing/docs/load-balancing-overview):
-    - [HTTPS](https://cloud.google.com/load-balancing/docs/https/): The most robust. Lots of features for routing rules, service based routing, global availiblity, and so on
+    - [HTTPS](https://cloud.google.com/load-balancing/docs/https/): The most robust. Lots of features for routing rules, service based routing, global availability, and so on
     - SSL: Global, TCP with SSL offload, external
     - TCP Proxy: TCP without offload(doesn't preserve client IPs), global, external
     - Network TCP/UDP: No ssl offload, preserves client IPs, regional, external
     - Internal TCP/UDP: Regional, internal
 
 3.3 Deploying applications and services on Google Kubernetes Engine.
-- Deploying a GKE cluster: `gcloud container clusters create [arguments]`. [Clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster) can be zonal, regional, private (nodes not accessable on internet), and alpha (not recommended for public use)
+- Deploying a GKE cluster: `gcloud container clusters create [arguments]`. [Clusters](https://cloud.google.com/kubernetes-engine/docs/how-to/creating-a-cluster) can be zonal, regional, private (nodes not accessible on internet), and alpha (not recommended for public use)
 - Deploying a containerized application to GKE: Create a [Deployment](https://cloud.google.com/kubernetes-engine/docs/concepts/deployment). A deployment is a set of identical pods running a set of containers defined in a manifest (YAML) file. Here's a [tutorial](https://cloud.google.com/kubernetes-engine/docs/tutorials/hello-app)
 -  Configuring GKE application monitoring and logging: [StackDriver](https://cloud.google.com/monitoring/kubernetes-engine/) supports monitoring for GKE. Legacy StackDriver (GA) and SD Kubernetes Monitoring (beta) are offered. There is a Stackdriver K8s Monitoring Console dashboard showing metrics. 
 - Creating a load balancer for GKE instances: GKE supports TCP/UDP and HTTP(S) load balancers for public access. TCP load balancers are not aware of individual HTTP(S) requests, and do not feature health checks. HTTP(S) loadbalancers use Ingress, and are sensitive to requests to make context aware decisions. They feature URL maps the TLS termination. GKE automatically configures health checks. More [here](https://cloud.google.com/kubernetes-engine/docs/tutorials/http-balancer). Internal load balancers are a service that can be configured like [so](https://cloud.google.com/kubernetes-engine/docs/how-to/internal-load-balancing). The service's `spec` will include `type: LoadBalancer` in the `service.yaml`. See example:
@@ -81,7 +81,7 @@ As long as service resources are behind a google load balancer, most of these st
 - Versions: App Engine deployments are versioned. Traffic splitting can be done along versions for canary deployments. This streamlines rollback when issues arise.
 - Blue/green deployment: Since deployments are versioned, you can cut 100% of traffic from one version of the deployment to the new one, once it has been approved for prod use. 
 
-3.5 Depoloying a Cloud Function
+3.5 Deploying a Cloud Function
 - Cloud Functions that are triggered via an event (e.g., Cloud Pub/Sub events, Cloud Storage object change notification events): When configuring a Cloud Function, it can subscribe to a pub/sub topic, and new writes can trigger the function, passing in information. Changes to objects in a bucket (upload, deletion, etc) can also trigger stuff.
 - Cloud Functions that are invoked via HTTP: All Cloud Functions have an HTTP endpoint. Hitting that endpoint can trigger the function, and it will return the output of the function. More [here](https://cloud.google.com/functions/docs/calling/http).
 
@@ -118,7 +118,7 @@ As long as service resources are behind a google load balancer, most of these st
     - Create a managed private zone: like the public one, but only visible from specified VPCs.
     - Create the record for the IP address and the A record.
     - Create a CNAME record
-    - Update domain name servers to push new recoreds. 
+    - Update domain name servers to push new records. 
 
     Find the full version [here](https://cloud.google.com/dns/docs/quickstart).
 
