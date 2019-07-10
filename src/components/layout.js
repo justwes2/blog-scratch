@@ -35,10 +35,10 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <div className="footer">
+        <footer>
           <p>Built with{` `}<a href="https://www.gatsbyjs.org">Gatsby</a></p>
           <p>This site uses <a href="www.google.com/policies/privacy/partners/">Google Analytics</a>. See more in <Link to="/pages/about">About</Link></p>
-        </div>
+        </footer>
       </div>
     </>
   )

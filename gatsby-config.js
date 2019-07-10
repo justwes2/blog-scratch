@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Coffay House`,
     description: `Hi I'm Wes and this is my site`,
-    author: `@gatsbyjs`,
+    author: ``,
   },
   plugins: [
     {

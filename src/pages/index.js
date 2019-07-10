@@ -11,11 +11,12 @@ export default ({ data }) => {
   return (
     
     <Layout>
-      <Helmet>
+      <SEO title="Home" />
+      {/* <Helmet>
         <meta charSet="utf-8" />
         <title>Coffay House</title>
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
-      </Helmet>
+      </Helmet> */}
         <div>
             <h1></h1>
             <h4>{data.allMarkdownRemark.totalCount} Posts</h4>

@@ -120,13 +120,20 @@
     font-size: 1em;
   }
   
-  .footer {
-    display: flex;
+  footer {
+    /* display: flex; */
     justify-content: center;
     /* flex-wrap: wrap; */
     margin: 3vh;
     margin-top: 20px;
     background-color: rgba(151, 140, 146, .9);
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  footer > p {
+    margin: 0;
+    padding: 0;
   }
   
   .canvasContainer {
