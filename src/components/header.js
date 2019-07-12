@@ -13,6 +13,7 @@ export default () => (
           <h3>Cloud Native Developer and DevOps Engineer</h3>
           <h4>Pronounced \ ˈkȯ-fē , ˈkä- \ </h4>
           <h4>Just like the drink (but with higher caffeine content)</h4>
+          <h4><Link to="/pages/about">About Me</Link></h4>
         </div>
       </div>
     </div>

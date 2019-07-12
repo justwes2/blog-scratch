@@ -14,3 +14,6 @@ If you want to know more, you can find me at
 - [My LinkedIn](https://www.linkedin.com/in/wes-coffay-4027b040)
 - [My GitHub](https://github.com/justwes2)
 - Or you can email me at wes.coffay[a]gmail.com
+
+#### A Note About Privacy
+I'm experimenting with Google Analytics to measure traffic to this site. Mostly, I just want to see if anyone other than my Mom visits this site (Hi Mom!). Right now, all the data collected is the default that Google collects. As I get more comfortable with using the service, I may make changes- which would be posted before implementation. 
