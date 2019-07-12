@@ -6,7 +6,7 @@
   
   body {
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(73, 180, 247);
+    background-color: rgb(67, 98, 134);
     background: url("../images/background1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -21,7 +21,7 @@
   }
   
   .Home-header {
-    background-color: rgba(151, 140, 146, .9);
+    background-color: rgba(151, 140, 146, 0.9);
     text-align: center;
     color: black;
     margin: 3vh;

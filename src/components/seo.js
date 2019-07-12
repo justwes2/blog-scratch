@@ -44,7 +44,7 @@ function SEO({ description, lang, meta, title }) {
       meta={[
         {
           name: `theme-color`,
-          content: `rgb(151, 140, 146)`
+          content: `rgb(67, 98, 134)`
         },
         {
           name: `description`,
