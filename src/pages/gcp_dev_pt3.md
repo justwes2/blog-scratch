@@ -8,7 +8,7 @@ Part 3 of 6
 *Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
 
 
-#### Section 3: Deploying applications
+### Section 3: Deploying applications
 3.1 Implementing appropriate deployment strategies based on the target compute environment (Compute, GKE, GAE). Strategies include:
 
    - Blue/green deployments: create a new resource target (VM, managed VM group, K8s service, GAE service) and cut the load balancer/routing to the new version. 

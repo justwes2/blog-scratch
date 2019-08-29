@@ -7,7 +7,7 @@ Part 1 of 6
 
 *Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
 
-#### Section 1: Designing highly scalable, available, and reliable cloud-native applications
+### Section 1: Designing highly scalable, available, and reliable cloud-native applications
 1.1 Designing performant applications and APIs
 - IaaS vs Container as a Service vs PaaS (e.g. autoscaling implications)
     - IaaS: VMs, managed service groups for autoscaling, can configure for HA, failover

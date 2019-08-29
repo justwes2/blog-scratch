@@ -8,7 +8,7 @@ Part 2 of 6
 *Last month I took the [Google Cloud Platform Professional Developer Exam](https://cloud.google.com/certification/cloud-developer). To prepare, I put together a study guide. I'm posting it here in five parts. Hopefully, it will help someone else with the exam. You can see the full study guide at my [GitHub](https://github.com/justwes2/gcp\_developer).*
 
 
-#### Section 2: Building and Testing Applications
+### Section 2: Building and Testing Applications
 2.1 Setting up your development environment
 - Emulating GCP services for local application development: With GCP's scalability, it is possible to have a dev environment where condition mirror production very closely. When that is not feasible, containers are a good way to make sure local dev matches the GCP environment very closely. Infrastructure as Code is a good tool to make sure resources are created the same way each time they are created, so that dev machines function closely matches prod function.
 - Creating GCP projects: Projects are entities that contain and constrain resources. Every application should have a project per environment (dev, test, prod, etc). Projects allow for easy management of cost and access. 
