@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - echo 'installing node'
+    - curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
+    - yum -y install nodejs
+    - echo 'installing gatsby'
+    - npm install -y gatsby-cli
+  build:
+    - echo 'building static bundle'
+    - gatsby build
+artifacts:
+  files:
+  - public/*
