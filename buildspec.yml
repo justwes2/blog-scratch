@@ -2,13 +2,17 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      nodejs: 10
     commands:
-      - echo 'installing node'
-      - curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
-      - yum -y install nodejs
+      # - echo 'installing node'
+      # - curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
+      # - yum -y install nodejs
       - echo 'installing gatsby'
       - npm install -y gatsby-cli
   build:
+    runtime-versions:
+      nodejs: 10
     commands:
       - echo 'building static bundle'
       - gatsby build
