@@ -16,8 +16,7 @@ phases:
       - echo 'building static bundle'
       - yarn
       - gatsby build
-artifacts:
-  files:
-  - public/**/*
-  discard-paths: yes
-  base-directory: '.'
+  post_build:
+    commands:
+      - echo 'copying site to sb bucket'
+      - aws s3 sync public s3://dev.coffay.haus --delete
