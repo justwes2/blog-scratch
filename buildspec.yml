@@ -11,8 +11,6 @@ phases:
       - echo 'installing gatsby'
       - npm install -y gatsby-cli
   build:
-    runtime-versions:
-      nodejs: 10
     commands:
       - echo 'building static bundle'
       - gatsby build
