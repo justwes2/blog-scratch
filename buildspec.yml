@@ -18,4 +18,6 @@ phases:
       - gatsby build
 artifacts:
   files:
-  - public/*
+  - public/**/*
+  discard-paths: yes
+  base-directory: '.'
