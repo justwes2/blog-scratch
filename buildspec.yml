@@ -9,10 +9,12 @@ phases:
       # - curl --silent --location https://rpm.nodesource.com/setup_12.x | bash -
       # - yum -y install nodejs
       - echo 'installing gatsby'
-      - npm install -y gatsby-cli
+      - npm install --global yarn 
+      - npm install --global gatsby-cli
   build:
     commands:
       - echo 'building static bundle'
+      - yarn
       - gatsby build
 artifacts:
   files:
