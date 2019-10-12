@@ -19,4 +19,4 @@ phases:
   post_build:
     commands:
       - echo 'copying site to sb bucket'
-      - aws s3 sync public s3://dev.coffay.haus --delete
+      - aws s3 cp public s3://dev.coffay.haus/ --recursive --region us-east-1 --acl public-read
