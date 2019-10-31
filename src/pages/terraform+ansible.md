@@ -1,17 +1,17 @@
 ---
 path: "/terraform+ansible"
-date: "2019-08-17"
+date: "2019-08-29"
 title: "Hacking Ansible Inventory with Terraform"
 ---
 
-### Dramatis personae
- ##### [__Ansible__](https://docs.ansible.com/)
+### Dramatis personae   
+##### [__Ansible__](https://docs.ansible.com/) 
 
 Ansible is a software configuration management framework. Users write playbooks of plays that set the state of a host- for the purposes of this post, a VM in the cloud space. Plays can also hit cloud provider apis to affect cloud infrastructure. Inventory of hosts managed by Ansible can be managed in a central Tower server. 
 
-##### [__Terraform__](https://www.terraform.io/docs/index.html)
+##### [__Terraform__](https://www.terraform.io/docs/index.html) 
 
-Terraform is a tool to provision infrastructure. Users create modules and call them with different parameters to create different types of resources. Details about existing infrastructure- called state- can be stored locally, or in a bucket in a cloud. In addition to providers for the major CSPs and some other technologies, Terraform can act on the local system in a number of ways. (I'm using Terraform 0.11 for the snippets here. Terraform .11 is more verbose, so it can be clearer to readers who are unfamiliar with HCL (Hashicorp Configuration Language).)
+Terraform is a tool to provision infrastructure. Users create modules and call them with different parameters to create different types of resources. Details about existing infrastructure- called state- can be stored locally, or in a bucket in a cloud. In addition to providers for the major CSPs and some other technologies, Terraform can act on the local system in a number of ways. (I'm using Terraform 0.11 syntax for the snippets here. Terraform .11 is more verbose, so it can be clearer to readers who are unfamiliar with HCL (Hashicorp Configuration Language).)
 
 ### The problem
 
