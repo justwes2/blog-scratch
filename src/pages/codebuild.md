@@ -1,13 +1,13 @@
 ---
 path: "/codebuild"
-date: "2019-10-27"
+date: "2019-10-31"
 title: "Getting Familiar with AWS CodeBuild"
 ---
 This month, I ended up biting the bullet and going for my AWS Professional DevOps Engineer Certification. Obviously, CI/CD was a major part of the exam. Now, a sane person who works in the field (I am the latter, the former is debatable) would focus on Jenkins, and maybe some Bamboo or Spinnaker, since those are the players in CI/CD. But, of course, this is AWS, so there's a service for that!
 
 AWS CodeBuild is a part of the AWS Development suite: CodeCommit, CodeBuild, CodeDeploy, and CodePipeline. In my notes, I started referencing them as Code*, but it turns out CodeStar is - you guessed it - the hub for all the Code services. CodeBuild - as the name suggests - lets you run a build job, based your code. AWS runs the builds in a managed container environment with the runtime of your choosing. There are a few prepared options, or you can bring your own image. 
 
-I decided to get my hands dirty and see how it worked - I've mostly used Jenkins up to this point, and I'm wasn't sold on a CSP specific solution - I have similar/identical reservations about GCP's CloudBuild. Now, working mostly in python, I don't have many projects that need to be build. The only thing in my GH that seemed a candidate was this - my blog. Now, on th one hand, I know I should be ashamed, as a DevOps engineer, that my blog is manually deployed. But I prefer that to this:
+I decided to get my hands dirty and see how it worked - I've mostly used Jenkins up to this point, and I wasn't sold on a CSP specific solution - I have similar/identical reservations about GCP's CloudBuild. Now, working mostly in python, I don't have many projects that need to be build. The only thing in my GH that seemed a candidate was this - my blog. Now, on the one hand, I know I should be ashamed, as a DevOps engineer, that my blog is manually deployed. But I prefer that to this:
 
 ![A typical devops blog.](../images/codebuild_meme.png)
 
@@ -46,4 +46,4 @@ I mean, its right in the [docs](https://docs.aws.amazon.com/codebuild/latest/use
 
 I also found that having to configure the trigger as a CodePipeline somewhat overengineered. In all my spare time, a webhook-SNS-Lambda solution may be a more cost effective choice. 
 
-In conclusion, I don't hate CodeBuild as much as I kinda wanted to. It's a tool that, in specific use cases, works really well. If you only have a few jobs- not enough to justify a Jenkins server, or if you have no CI/CD footprint, it may be a no-ops, low-overhead solution. But I don't think its worth migrating from Jenkins just for the benefits. 
+In conclusion, I don't hate CodeBuild as much as I kinda wanted to. It's a tool that, in specific use cases, works really well. If you only have a few jobs- not enough to justify a Jenkins server, or if you have no CI/CD footprint, it may be a no-ops, low-overhead solution. But if you have a robust Jenkins ecosystem, CodeBuild probably won't solve more problems than it creates.
