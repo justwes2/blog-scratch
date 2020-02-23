@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 10
+    commands:
+      - echo 'installing gatsby'
+      - npm install --global yarn 
+      - npm install --global gatsby-cli
+  build:
+    commands:
+      - echo 'building static bundle'
+      - yarn
+      - gatsby build
+  post_build:
+    commands:
+      - echo 'copying site to s3 bucket'
+      - aws s3 cp public s3://coffay.haus/ --recursive --region us-east-1 --acl public-read
