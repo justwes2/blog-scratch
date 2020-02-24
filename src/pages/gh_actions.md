@@ -8,7 +8,7 @@ _I live! Apologies to my one reader for the tumbleweeds. Between changing jobs a
 
 ### The Problem
 
-Last time, I wrote about how I set up CodeBuild to get some CI on my blog. It was mostly done as a way to study for my AWS Professional DevOps cert (I passed, btw/nbd). I liked having the automation in place, but it was rudimentary, and not a complete solution - I set up the dev branch to build to the dev environment. But deploying to production was still a manual process. Which is lame. 
+Last time, I wrote about how I set up CodeBuild to get some CI on my blog. It was mostly done as a way to study for my AWS Professional DevOps cert _(I passed, btw/nbd)_. I liked having the automation in place, but it was rudimentary, and not a complete solution - I set up the dev branch to build to the dev environment. But deploying to production was still a manual process. Which is lame. 
 
 So today, I decided to fix that. Well, actually, I decided to look at another problem I'm having with the analytics, but realized the rapid iteration I wanted to do for testing would be a PITA with manual deployments. So I created another `buildspec.yml` for my prod deployments, and tried to get that to work. The Code Pipeline didn't lend itself well to a Jenkins-style multibranch pipeline, so I couldn't use that as an orchestrator for `dev` => `dev`, `master` => `prod` deployments. I played with the webhook feature in CodeBuild, but I couldn't get the filters to work correctly- the dev build would fire on prod triggers and the commit ids didn't match anything in the git history, so I couldn't tell where the source code was coming from. 
 
@@ -26,7 +26,7 @@ on:
     branches: 
       - dev
 ```
-(My only complaint so far is that it seems creating a PR triggers a build on the branch being merged in. Not a dealbreaker, but something that should be avoidable)
+_(My only complaint so far is that it seems creating a PR triggers a build on the branch being merged in. Not a dealbreaker, but something that should be avoidable)_
 
 Next, define the build job runtime. I left it as the default ubuntu image, but I'm sure a custom container could slot in here. 
 ```
@@ -34,9 +34,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 ```
-Then you just define a series of `steps`, using `name`, `run`, and sometimes `with` to define the build process. 
-
-I was able to make two files: `dev.yml` and `prod.yml`,  to support the multibranch deployment strategy I wanted. 
+Then you just define a series of `steps`, using `name`, `run`, and sometimes `with` to define the build process. I was able to make two files: `dev.yml` and `prod.yml`,  to support the multibranch deployment strategy I wanted. 
 
 ### Final Thoughts
 
