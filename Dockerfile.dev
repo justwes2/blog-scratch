@@ -15,3 +15,5 @@ COPY ./package.json .
 RUN yarn install && yarn cache clean
 COPY . .
 CMD ["yarn", "develop", "-H", "0.0.0.0" ]
+
+# docker-compose up --build
