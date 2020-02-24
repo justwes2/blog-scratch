@@ -23,8 +23,8 @@ jobs:
     - name: Install Gatsby
       run: |
         echo 'installing gatsby'
-        npm install yarn 
-        npm install gatsby-cli
+        sudo npm install --global yarn 
+        sudo npm install --global gatsby-cli
     - name: Building Static Site
       run: |
         echo 'building static bundle'
